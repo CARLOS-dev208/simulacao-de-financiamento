@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simulação de financiamento</title>
+</head>
+
+<body>
+    <div class="calcula">
+        <div class="content">
+            <div class="campos">
+                <h1>Simulação de financiamento</h1>
+                <label>Valor:<input id="valor" type="number" value="200000" ></label>
+                <label>Prazo (anos):<input id="prazoAoAno" value="20" type="number" ></label>
+                <label>Juros ao ano:<input id="jurosAoAno" type="number" max="0.08" min="0.01" step="0.01" value="0.08" ></label>
+                <button type="button">Simular</button>
+            </div>
+        </div>
+        <div class="table">
+            <h1>Resultado</h1>
+
+            <div class="resultado">
+                <label>Prazo (meses):<input id="prazoAoMes" disabled type="number" ></label>
+                <label>Juros ao mês:<input id="jurosAoMes" disabled type="number" ></label>
+                <label>Juros acumulados:<input id="jurosAcumulados" disabled type="number" ></label>
+            </div>
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prestação</th>
+                            <th>Amortização</th>
+                            <th>Juros</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <div>
+                            <tr style="display: none">
+                                <td class="index">0</td>
+                                <td class="amortizado">0</td>
+                                <td class="juros">0</td>
+                                <td class="total">0</td>
+                            </tr>
+                        </div>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
